@@ -1,246 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fazlan Builders</title>
-  
-  
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  
-  
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-  
-  <style>
-    * {
-      margin: 0; 
-      padding: 0; 
-      box-sizing: border-box; 
-      font-family: 'Poppins', sans-serif;
-    }
-    body {
-      line-height: 1.6; 
-      color: #333; 
-      scroll-behavior: smooth;
-    }
-    a { text-decoration: none; color: inherit; }
-    ul { list-style: none; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazlan Builders - We Build Your Dream Home</title>
 
     
-    nav {
-      display: flex; 
-      justify-content: space-between; 
-      align-items: center; 
-      padding: 20px 50px; 
-      background: #0d3b66; 
-      position: sticky; 
-      top: 0; 
-      z-index: 100;
-    }
-    nav .logo { font-size: 28px; font-weight: 700; color: #fff; }
-    nav ul { display: flex; gap: 25px; }
-    nav ul li a {
-      color: #fff; 
-      font-weight: 500; 
-      transition: 0.3s;
-    }
-    nav ul li a:hover, nav ul li a.active { color: #ffb703; }
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     
-    .hero {
-      position: relative; 
-      height: 90vh; 
-      display: flex; 
-      align-items: center; 
-      justify-content: center; 
-      text-align: center; 
-      background: url('https://images.unsplash.com/photo-1594679922626-5c7f0eb76b1a?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat; 
-      color: #fff;
-    }
-    .hero-overlay {
-      position: absolute; 
-      top: 0; 
-      left: 0; 
-      width: 100%; 
-      height: 100%; 
-      background: rgba(13,59,102,0.7);
-    }
-    .hero-content {
-      position: relative; 
-      max-width: 700px;
-    }
-    .hero-content h1 { font-size: 48px; margin-bottom: 20px; }
-    .hero-content p { font-size: 20px; margin-bottom: 30px; }
-    .btn {
-      background: #ffb703; 
-      color: #fff; 
-      padding: 12px 30px; 
-      border: none; 
-      border-radius: 5px; 
-      font-weight: 600; 
-      transition: 0.3s;
-      cursor: pointer;
-    }
-    .btn:hover { background: #fb8500; }
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #222;
+            background: #faf8f1;
+        }
+
+        section {
+            scroll-margin-top: 100px;
+            padding: 80px 20px;
+        }
+
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 50px;
+            background: #000;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav img {
+            height: 65px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: #fff;
+            font-weight: 500;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #ffcc00;
+        }
+
+        
+        .hero {
+            height: 85vh;
+            background: url('picture.jpg') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero div {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        
+        .section-title {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 40px;
+            color: #111;
+            font-weight: 700;
+        }
 
     
-    section { padding: 60px 50px; }
-    .section-title { text-align: center; font-size: 32px; margin-bottom: 50px; color: #0d3b66; }
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            padding: 0 40px;
+            flex-wrap: wrap;
+        }
+
+        .about-container img {
+            width: 420px;
+            border-radius: 12px;
+        }
+
+        .about-container p {
+            max-width: 520px;
+            font-size: 18px;
+            text-align: justify;
+        }
 
     
-    .service-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
-    .service-card {
-      background: #f1f5f9; 
-      padding: 30px; 
-      border-radius: 10px; 
-      text-align: center; 
-      width: 300px; 
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .service-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
-    .service-card i { font-size: 40px; color: #ffb703; margin-bottom: 15px; }
-    .service-card h3 { margin-bottom: 10px; }
-    .service-card p { font-size: 16px; color: #555; }
+        .service-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            padding: 0 40px;
+        }
+
+        .service-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            width: 285px;
+            border: 2px solid #ffcc00;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card i {
+            font-size: 45px;
+            color: #ffcc00;
+            margin-bottom: 15px;
+        }
 
     
-    .about-container { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
-    .about-container img { width: 500px; border-radius: 10px; max-width: 100%; height: auto; }
-    .about-container p { max-width: 500px; font-size: 18px; }
+        .project-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 0 40px;
+        }
 
-    
-    .project-grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-    .project-card {
-      width: 300px; 
-      border-radius: 10px; 
-      overflow: hidden; 
-      transition: transform 0.3s;
-    }
-    .project-card img { width: 100%; height: 200px; object-fit: cover; }
-    .project-card:hover { transform: scale(1.05); }
-    .project-card h3 { text-align: center; padding: 10px 0; }
+        .project-card {
+            width: 300px;
+            height: 200px;
+            background: #ccc;
+            border-radius: 10px;
+            background-size: cover;
+            background-position: center;
+        }
 
-    
-    .contact-container { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; }
-    .contact-info { max-width: 400px; }
-    .contact-info i { font-size: 20px; color: #0d3b66; margin-right: 10px; }
-    .contact-form { display: flex; flex-direction: column; gap: 15px; max-width: 400px; }
-    .contact-form input, .contact-form textarea {
-      padding: 12px; 
-      border-radius: 5px; 
-      border: 1px solid #ccc; 
-      font-size: 16px; 
-      width: 100%;
-    }
-    .contact-form button { padding: 12px; background: #ffb703; border: none; border-radius: 5px; color: #fff; font-weight: 600; cursor: pointer; transition: 0.3s; }
-    .contact-form button:hover { background: #fb8500; }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 450px;
+            margin: 0 auto 20px;
+            gap: 12px;
+            padding: 0 20px;
+        }
 
-    
-    footer { background: #0d3b66; color: #fff; text-align: center; padding: 20px; }
+        form input,
+        form textarea {
+            padding: 12px;
+            border: 2px solid #000;
+            border-radius: 8px;
+            font-size: 16px;
+        }
 
-    
-    @media(max-width: 992px){
-      .about-container img{width:100%;}
-      .about-container p{max-width:100%;}
-    }
-    @media(max-width: 768px){
-      nav ul{display:none;}
-      .service-card, .project-card{width:100%;}
-    }
-  </style>
+        form button {
+            padding: 12px;
+            background: #ffcc00;
+            border: none;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        form button:hover {
+            background: #e6b800;
+        }
+
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 18px;
+            font-size: 15px;
+            margin-top: 20px;
+        }
+
+        
+        @media(max-width:768px) {
+            nav ul {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .about-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .about-container p {
+                text-align: center;
+            }
+
+            .about-container img {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <!-- Navbar -->
-  <nav>
-    <div class="logo">Fazlan Builders</div>
-    <ul>
-      <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
 
-  
-  <section class="hero" id="home">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Building Your Dreams</h1>
-      <p>Expert construction and renovation solutions for homes and businesses.</p>
-      <a href="#services" class="btn">Our Services</a>
-    </div>
-  </section>
+    
+    <nav>
+        <img src="images/logo.png" alt="Fazlan Builders Logo">
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-  
-  <section class="services" id="services">
-    <h2 class="section-title">Our Services</h2>
-    <div class="service-container">
-      <div class="service-card">
-        <i class='bx bx-buildings'></i>
-        <h3>Residential Construction</h3>
-        <p>Quality homes built with precision and care from start to finish.</p>
-      </div>
-      <div class="service-card">
-        <i class='bx bx-hard-hat'></i>
-        <h3>Commercial Projects</h3>
-        <p>Modern office spaces, shops, and industrial facilities tailored to your needs.</p>
-      </div>
-      <div class="service-card">
-        <i class='bx bx-paint'></i>
-        <h3>Renovations & Remodeling</h3>
-        <p>Transforming spaces with stylish, functional, and sustainable solutions.</p>
-      </div>
-    </div>
-  </section>
+    
+    <section class="hero" id="home">
+        <div>
+            <h1>We Build Your Dream Home</h1>
+            <p>Delivering quality construction with excellence and trust.</p>
+        </div>
+    </section>
 
-  
-  <section class="about" id="about">
-    <h2 class="section-title">About Us</h2>
-    <div class="about-container">
-      <img src="content.jfif" alt="Construction Team">
-      <p>Fazlan Builders delivers professional, reliable, and sustainable building solutions. Our expert team combines modern techniques and attention to detail to create structures that last a lifetime.</p>
-    </div>
-  </section>
+    
+    <section id="about">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-container">
+            <img src="content.jfif" alt="Construction">
+            <p>
+                Fazlan Builders delivers professional, reliable, and cost-efficient construction solutions.
+                With skilled experts and modern technology, we create durable structures that ensure comfort and safety
+                for a lifetime.
+            </p>
+        </div>
+    </section>
 
-  
-  <section class="projects" id="projects">
-    <h2 class="section-title">Our Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <img src="https://images.unsplash.com/photo-1581090700227-4a78b6ff0e8d?auto=format&fit=crop&w=1350&q=80" alt="Luxury Villa">
-        <h3>Luxury Villa</h3>
-      </div>
-      <div class="project-card">
-        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1350&q=80" alt="Corporate Office">
-        <h3>Corporate Office</h3>
-      </div>
-      <div class="project-card">
-        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1350&q=80" alt="Shopping Complex">
-        <h3>Shopping Complex</h3>
-      </div>
-    </div>
-  </section>
+    
+    <section id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="service-container">
+            <div class="service-card"><i class='bx bx-building-house'></i>
+                <h3>Construction</h3>
+            </div>
+            <div class="service-card"><i class='bx bx-refresh'></i>
+                <h3>General Renovation</h3>
+            </div>
+            <div class="service-card"><i class='bx bx-bath'></i>
+                <h3>Bathroom Renovation</h3>
+            </div>
+            <div class="service-card"><i class='bx bx-bowl-hot'></i>
+                <h3>Kitchen Renovation</h3>
+            </div>
+        </div>
+    </section>
 
-  
-  <section class="contact" id="contact">
-    <h2 class="section-title">Contact Us</h2>
-    <div class="contact-container">
-      <div class="contact-info">
-        <p><i class='bx bx-location-plus'></i>7/b nehuruji road koothanallur thiruvarur(dist)</p>
-        <p><i class='bx bx-phone'></i>+91 8973646160</p>
-        <p><i class='bx bx-envelope'></i>contact@fazlanbuilders.com</p>
-      </div>
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-    </div>
-  </section>
+    
+    <section id="projects">
+        <h2 class="section-title">Our Projects</h2>
+        <div class="project-container">
+            <div class="project-card" style="background-image:url('images/project1.jpg');"></div>
+            <div class="project-card" style="background-image:url('images/project2.jpg');"></div>
+            <div class="project-card" style="background-image:url('images/project3.jpg');"></div>
+        </div>
+    </section>
 
-  <footer>
-    Fazlan Builders &copy; 2025. All Rights Reserved.
-  </footer>
+    
+    <section id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <div style="text-align:center;font-size:17px;margin-bottom:20px;">
+            <p><i class='bx bx-map'></i> 7/B2, Nehruji Road, Koothanallur, Thiruvarur</p>
+            <p><i class='bx bx-phone'></i> +91 8973646160</p>
+            <p><i class='bx bx-envelope'></i> rasheedfazlan1981@gmail.com</p>
+        </div>
+
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+
+    <footer>
+        © 2025 Fazlan Builders | All Rights Reserved
+    </footer>
+
+    
+    <script>
+        const navLinks = document.querySelectorAll('nav ul li a');
+        const sections = document.querySelectorAll('section');
+        const offset = 100; 
+
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                if (!target) return;
+                const targetPosition = target.offsetTop - offset;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        
+        window.addEventListener('scroll', () => {
+            let current = sections[0].id;
+            sections.forEach(section => {
+                if (window.pageYOffset >= section.offsetTop - offset - 5) {
+                    current = section.id;
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
 </body>
+
 </html>
